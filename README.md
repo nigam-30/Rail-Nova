@@ -1,7 +1,7 @@
 # 🚂 Rail Nova — Indian Train Booking System
 
 > A full-stack, high-performance Indian railway ticket booking web application built with **FastAPI**, **SQLite**, **WebSockets**, and a vanilla **HTML/JS** frontend. Supports real seat allocation (CNF/RAC/WL), Tatkal booking with live queue, eWallet payments, and auto background cleanup tasks.
-
+Download the zip file to access all the project files
 ---
 
 ## 📋 Table of Contents
