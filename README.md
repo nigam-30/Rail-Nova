@@ -1,7 +1,7 @@
 # 🚂 Rail Nova — Indian Train Booking System
 
 > A full-stack, high-performance Indian railway ticket booking web application built with **FastAPI**, **SQLite**, **WebSockets**, and a vanilla **HTML/JS** frontend. Supports real seat allocation (CNF/RAC/WL), Tatkal booking with live queue, eWallet payments, and auto background cleanup tasks.
-Download the zip file to access all the project files
+
 ---
 
 ## 📋 Table of Contents
@@ -157,38 +157,44 @@ Make sure you have the following installed before starting:
 
 ## 🚀 Installation & Setup
 
-### Step 1 — Clone / Extract the Project
+### 💻 Windows (Easiest — Automatic 1-Click Setup)
 
-If you downloaded the zip, extract it. Your working directory should be:
-```
-Rail Nova -Booking System Project/
-```
+Simply run the **`start.bat`** file located at the root of the project folder. 
 
-### Step 2 — Navigate to the Backend Directory
+The script will automatically:
+1. Check if Python is installed (if not, it will download Python 3.11, install it silently, and refresh your system path).
+2. Create and activate a Python virtual environment (`venv`).
+3. Upgrade `pip` and install all required backend packages.
+4. Boot up the FastAPI backend server on `http://localhost:8000`.
+
+---
+
+### 🍏 macOS / 🐧 Linux / 🛠 Manual Setup
+
+If you are on macOS/Linux, or want to configure the setup manually on Windows, follow these steps:
+
+#### Step 1 — Navigate to the Backend Directory
 
 ```bash
-cd "Rail Nova -Booking System Project/train-booking/backend"
+cd "train-booking/backend"
 ```
 
-### Step 3 — Create a Virtual Environment
+#### Step 2 — Create a Virtual Environment
 
 ```bash
 # Create venv
 python -m venv venv
 
-# Activate — Windows (PowerShell)
-venv\Scripts\Activate.ps1
+# Activate — macOS / Linux
+source venv/bin/activate
 
 # Activate — Windows (Command Prompt)
 venv\Scripts\activate.bat
-
-# Activate — macOS / Linux
-source venv/bin/activate
 ```
 
 > You should see `(venv)` prefix in your terminal after activation.
 
-### Step 4 — Install Dependencies
+#### Step 3 — Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -201,7 +207,7 @@ This installs:
 - `passlib[bcrypt]`, `python-jose[cryptography]` — auth/security
 - `python-multipart`, `httpx`, `alembic` — supporting libs
 
-### Step 5 — Configure Environment Variables
+#### Step 4 — Configure Environment Variables
 
 Copy the example env file and edit it:
 
@@ -225,7 +231,7 @@ FRONTEND_URL=http://localhost:8000
 
 > ⚠️ **Important:** Change `JWT_SECRET_KEY` to a long random string before use.
 
-### Step 6 — Seed the Database
+#### Step 5 — Seed the Database
 
 The seeder reads the CSV files and populates stations, trains, and stoppages into SQLite.
 
@@ -257,8 +263,10 @@ Pre-seeded XX seat records for next 5 days.
 
 ## ▶️ Running the Application
 
-### Start the Backend Server
+### Option A: Using the Launcher (Windows)
+Double-click **`start.bat`** at the project root. It will handle the backend start automatically.
 
+### Option B: Manual Command
 From the `backend/` directory (with venv active):
 
 ```bash
@@ -429,7 +437,3 @@ For PowerShell-based API testing:
 **Nigam Mehta** — Pursuing Electronics Engineering (VLSI Design And Technology), SAKEC, Mumbai, India  
 Project: Rail Nova — Indian Railway Booking System  
 Stack: FastAPI · SQLAlchemy · SQLite · Vanilla JS · Tailwind CSS
-
-## ⚠️ License:
-This project is intended for **simulation, knowledge, and testing purposes only.**
-Not for commercial use or production deployment.
